@@ -1,0 +1,27 @@
+import type { Driver } from '../types/fleet';
+
+export const drivers: Driver[] = [
+{ id: 'DRV-01', name: 'Mohamed Ben Ali', phone: '+216 98 412 337', truckId: 'TRK-001', status: 'on_duty', licence: 'C+E · 08/412337', trips: 3, cycleAvg: 31.4, delays: 0, alerts: 0, since: '2019' },
+{ id: 'DRV-02', name: 'Karim Trabelsi', phone: '+216 97 220 815', truckId: 'TRK-002', status: 'on_duty', licence: 'C+E · 11/220815', trips: 5, cycleAvg: 36.8, delays: 2, alerts: 1, since: '2021' },
+{ id: 'DRV-03', name: 'Sami Gharbi', phone: '+216 22 671 904', truckId: 'TRK-003', status: 'on_duty', licence: 'C+E · 07/671904', trips: 4, cycleAvg: 39.5, delays: 3, alerts: 2, since: '2018' },
+{ id: 'DRV-04', name: 'Nizar Chaabane', phone: '+216 55 318 270', truckId: 'TRK-004', status: 'on_duty', licence: 'C+E · 12/318270', trips: 6, cycleAvg: 30.2, delays: 0, alerts: 0, since: '2020' },
+{ id: 'DRV-05', name: 'Hichem Jemli', phone: '+216 98 904 116', truckId: 'TRK-005', status: 'on_duty', licence: 'C+E · 09/904116', trips: 5, cycleAvg: 32.9, delays: 1, alerts: 1, since: '2017' },
+{ id: 'DRV-06', name: 'Walid Ellouze', phone: '+216 24 553 781', truckId: 'TRK-006', status: 'on_duty', licence: 'C+E · 13/553781', trips: 5, cycleAvg: 31.0, delays: 0, alerts: 0, since: '2022' },
+{ id: 'DRV-07', name: 'Anis Masmoudi', phone: '+216 50 127 449', truckId: 'TRK-007', status: 'on_duty', licence: 'C+E · 10/127449', trips: 3, cycleAvg: 34.1, delays: 1, alerts: 1, since: '2016' },
+{ id: 'DRV-08', name: 'Fathi Karray', phone: '+216 98 760 205', truckId: 'TRK-008', status: 'on_duty', licence: 'C+E · 06/760205', trips: 6, cycleAvg: 29.8, delays: 0, alerts: 0, since: '2015' },
+{ id: 'DRV-09', name: 'Riadh Abid', phone: '+216 21 389 662', truckId: 'TRK-009', status: 'on_duty', licence: 'C · 14/389662', trips: 5, cycleAvg: 33.5, delays: 1, alerts: 1, since: '2021' },
+{ id: 'DRV-10', name: 'Mourad Feki', phone: '+216 52 046 918', truckId: 'TRK-010', status: 'break', licence: 'C+E · 08/046918', trips: 4, cycleAvg: 32.2, delays: 0, alerts: 1, since: '2019' },
+{ id: 'DRV-11', name: 'Bilel Sellami', phone: '+216 99 715 330', truckId: 'TRK-011', status: 'on_duty', licence: 'C+E · 15/715330', trips: 5, cycleAvg: 31.8, delays: 0, alerts: 0, since: '2023' },
+{ id: 'DRV-12', name: 'Yassine Kammoun', phone: '+216 23 802 571', truckId: 'TRK-012', status: 'on_duty', licence: 'C+E · 12/802571', trips: 6, cycleAvg: 30.6, delays: 0, alerts: 0, since: '2020' },
+{ id: 'DRV-13', name: 'Hatem Zouari', phone: '+216 98 263 094', truckId: 'TRK-013', status: 'on_duty', licence: 'C+E · 09/263094', trips: 7, cycleAvg: 30.9, delays: 0, alerts: 0, since: '2018' },
+{ id: 'DRV-14', name: 'Mehdi Bouaziz', phone: '+216 54 690 127', truckId: 'TRK-014', status: 'on_duty', licence: 'C+E · 16/690127', trips: 6, cycleAvg: 41.2, delays: 4, alerts: 2, since: '2024' },
+{ id: 'DRV-15', name: 'Lotfi Hammami', phone: '+216 97 418 560', truckId: 'TRK-015', status: 'on_duty', licence: 'C+E · 05/418560', trips: 7, cycleAvg: 32.4, delays: 1, alerts: 1, since: '2014' },
+{ id: 'DRV-16', name: 'Imed Turki', phone: '+216 25 937 302', truckId: 'TRK-016', status: 'on_duty', licence: 'C+E · 11/937302', trips: 5, cycleAvg: 37.0, delays: 2, alerts: 1, since: '2021' },
+{ id: 'DRV-17', name: 'Chokri Ayadi', phone: '+216 98 155 846', truckId: 'TRK-017', status: 'on_duty', licence: 'C · 10/155846', trips: 3, cycleAvg: 32.0, delays: 0, alerts: 0, since: '2019' },
+{ id: 'DRV-18', name: 'Aymen Dammak', phone: '+216 53 472 019', truckId: 'TRK-018', status: 'on_duty', licence: 'C · 17/472019', trips: 2, cycleAvg: 33.8, delays: 1, alerts: 1, since: '2024' },
+{ id: 'DRV-19', name: 'Slim Rekik', phone: '+216 98 330 671', truckId: 'TRK-019', status: 'on_duty', licence: 'C+E · 13/330671', trips: 0, cycleAvg: 0, delays: 0, alerts: 0, since: '2022' },
+{ id: 'DRV-20', name: 'Ramzi Mnif', phone: '+216 26 581 433', truckId: 'TRK-020', status: 'on_duty', licence: 'C+E · 12/581433', trips: 0, cycleAvg: 0, delays: 0, alerts: 0, since: '2020' },
+{ id: 'DRV-21', name: 'Tarek Baccouche', phone: '+216 98 017 285', truckId: 'TRK-021', status: 'on_duty', licence: 'C+E · 08/017285', trips: 0, cycleAvg: 0, delays: 0, alerts: 0, since: '2018' },
+{ id: 'DRV-22', name: 'Nabil Frikha', phone: '+216 55 744 908', truckId: 'TRK-022', status: 'on_duty', licence: 'C · 14/744908', trips: 0, cycleAvg: 0, delays: 0, alerts: 0, since: '2021' },
+{ id: 'DRV-23', name: 'Faouzi Jarraya', phone: '+216 97 693 152', truckId: 'TRK-023', status: 'on_duty', licence: 'C+E · 07/693152', trips: 0, cycleAvg: 0, delays: 0, alerts: 1, since: '2016' },
+{ id: 'DRV-24', name: 'Hamza Kallel', phone: '+216 20 408 776', truckId: 'TRK-024', status: 'off_duty', licence: 'C+E · 15/408776', trips: 0, cycleAvg: 0, delays: 0, alerts: 1, since: '2023' }];

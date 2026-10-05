@@ -1,0 +1,137 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: #f4f6fa;
+  color: #0f1a33;
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.leaflet-container {
+  font-family: Inter, system-ui, sans-serif;
+  background: #e9edf3;
+}
+.leaflet-control-attribution {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+.truck-marker-wrap,
+.site-marker-wrap,
+.vertex-marker-wrap {
+  background: transparent;
+  border: none;
+}
+/* Truck markers */
+.tm {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+}
+.tm-body {
+  position: relative;
+  z-index: 1;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: var(--tm);
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(10, 18, 54, 0.35);
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 160ms ease-out;
+}
+.tm:hover .tm-body {
+  transform: scale(1.08);
+}
+.tm-normal { --tm: #12b76a; }
+.tm-warning { --tm: #f79009; }
+.tm-alert { --tm: #f04438; }
+.tm-offline { --tm: #98a2b3; }
+.tm-selected .tm-body {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 3px #1e50d8, 0 4px 10px rgba(10, 18, 54, 0.35);
+}
+.tm-pulse::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 10px;
+  background: var(--tm);
+  animation: tm-pulse 1.8s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+@keyframes tm-pulse {
+  0% { transform: scale(0.9); opacity: 0.45; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+/* Fixed sites */
+.site-marker {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--sm);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(10, 18, 54, 0.3);
+}
+.site-workshop { --sm: #0e1a48; }
+.site-pause { --sm: #5b6478; }
+.site-inactive { opacity: 0.5; }
+.vertex {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 3px solid #f79009;
+  box-shadow: 0 1px 3px rgba(10, 18, 54, 0.35);
+  cursor: grab;
+}
+.leaflet-tooltip.zone-label {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #e3e8f0;
+  border-radius: 6px;
+  box-shadow: none;
+  color: #0f1a33;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+}
+.leaflet-tooltip.zone-label::before {
+  display: none;
+}
+.leaflet-tooltip.truck-label {
+  background: #0a1236;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  box-shadow: none;
+}
+.leaflet-tooltip-top.truck-label::before {
+  border-top-color: #0a1236;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tm-pulse::before { animation: none; }
+  .tm-body { transition: none; }
+}
